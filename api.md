@@ -48,7 +48,7 @@
 
 -------
 
-## UPLOADURL 上传日志信息接口(错误信息是否也用这个？)
+## UPLOADURL 上传日志信息接口
 
 -------
 - URL http://robot.com/uploadUrl
@@ -57,7 +57,8 @@
 ```
 {
   "taskId": "任务id",
-  "reportId": "报告id"
+  "reportId": "报告id",
+  "logUrl": "日志url"
 }
 ```
 - RESPONSE
@@ -75,7 +76,7 @@
 ## 上报性能数据接口
 
 -------
-- URL http://robot.com7:8888/
+- URL http://robot.com/
 - TYPE POST
 - REQUESTS 
 ```
@@ -111,7 +112,19 @@
   "yPos1": 2,
   "xPos2": 3,
   "yPos2": 4,
-  "email": "第一次掉用传登录用户邮箱"
+  "email": "第一次掉用传登录用户邮箱",
+  "deviceInfo": {
+    "deviceBrand": "品牌",
+    "deviceModel": "名称",
+    "deviceVersion": "版本",
+    "displayW": "宽",
+    "displayH": "高"
+  },
+  "appInfo": {
+    "appName": "名称",
+    "appPackage": "包名",
+    "appVersion": "版本"
+  }
 }
 ```
 ```
@@ -119,7 +132,8 @@
   "op" 1
   "taskId": "任务id",
   "reportId": "报告id",
-  "stepId": "步骤id",
+  "screenId": "截图id",
+  "stepIndex": "步骤索引"
   "screen": "base64图片流",
   "start": "是否需要找起始页"
 }
