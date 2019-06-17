@@ -73,16 +73,23 @@
 
 -------
 
-## 上报性能数据接口
+## PERFORMANCE 上报性能数据接口
 
 -------
-- URL http://robot.com/
+- URL http://robot.com/performance
 - TYPE POST
 - REQUESTS 
 ```
 {
   "taskId": "任务id",
-  "reportId": "报告id"
+  "reportId": "报告id",
+  "stepIndex": "步骤索引",
+  "cpu": "cpu占用",
+  "memory": "内存占用",
+  "memPer": "内存占用%",
+  "uploadData": "上行流量",
+  "downloadData": "下行流量",
+  "errorType": "错误类型"
 }
 ```
 - RESPONSE
@@ -112,7 +119,7 @@
   "yPos1": 2,
   "xPos2": 3,
   "yPos2": 4,
-  "email": "第一次掉用传登录用户邮箱",
+  "email": "第一次调用传登录用户邮箱",
   "deviceInfo": {
     "deviceBrand": "品牌",
     "deviceModel": "名称",
